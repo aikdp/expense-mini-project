@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 mkdir -p $LOG_FOLDER
-LOG_FOLDER="var/log/expense"
+LOG_FOLDER="var/log/shell-expense"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log"
@@ -30,13 +30,13 @@ CHECK(){
     fi    
 }
 
-dnf list installed mysql &>>$LOG_FILE
+dnf list installed mysql | tee -a $LOG_FILE
 if [ $? -eq 0 ]
 then 
     echo -e "$Y MYSQL Server is already installed.$N"
 else
     echo -e "MYSQL Server is not Installed, $R Please install MSQL $N"
-    dnf install mysql-server -y &>>$LOG_FILE
+    dnf install mysql-server -y | tee -a $LOG_FILE
     CHECK $? "MYSQL installation"  
 fi    
 
