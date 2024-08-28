@@ -31,15 +31,10 @@ CHECK(){
     fi    
 }
 ROOT
-dnf list installed mysql-server | tee -a $LOG_FILE
-if [ $? -eq 0 ]
-then 
-    echo -e "$Y MYSQL Server is already installed.$N"
-else
-    echo -e "MYSQL Server is not Installed, $R Please install MSQL $N"
-    dnf install mysql-server -y | tee -a $LOG_FILE
-    CHECK $? "MYSQL installation"
-fi
+
+dnf install mysql-server -y | tee -a $LOG_FILE
+CHECK $? "MYSQL installation"
+
 systemctl enable mysqld &>>$LOG_FILE
 CHECK $? "ENABLING MYSQL Service"
  
