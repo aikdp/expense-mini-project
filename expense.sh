@@ -9,8 +9,7 @@ else
     echo "USER does not have ROOT ACCESS, Please LOGIN as a ROOT USER"
     exit 1
 fi
-
-dnf install mysql-server -y
+dnf list installed mysql
 if [ $? -eq 0 ]
 then 
     echo "MYSQL Server is already installed."
