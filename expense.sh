@@ -18,5 +18,15 @@ else
     dnf install mysql-server -y
     exit 1
 fi    
+systemctl list-unit-files --state=enabled
+if [ $? -eq 0 ]
+then 
+    echo "MYSQL service already ENABLED"
+else 
+    echo "MYSQL service in not enabled, PLease ENABLE MYSQL"
+    systemctl enable mysqld
+    exit 1
+fi 
+
 
 
