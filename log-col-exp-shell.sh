@@ -31,7 +31,7 @@ CHECK(){
     fi    
 }
 ROOT
-dnf list installed mysql | tee -a $LOG_FILE
+dnf list installed mysql-server | tee -a $LOG_FILE
 if [ $? -eq 0 ]
 then 
     echo -e "$Y MYSQL Server is already installed.$N"
