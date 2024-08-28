@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 mkdir -p $LOG_FOLDER
-LOG_FOLDER="var/log/shell-expense"
+LOG_FOLDER="/var/log/shell-expense"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log"
@@ -21,7 +21,7 @@ else
     exit 1
 fi
 }
-ROOT
+
 CHECK(){
     if [ $1 -eq  0 ]
     then 
@@ -31,7 +31,7 @@ CHECK(){
         exit 1
     fi    
 }
-
+ROOT
 dnf list installed mysql | tee -a $LOG_FILE
     if [ $? -eq 0 ]
     then 
