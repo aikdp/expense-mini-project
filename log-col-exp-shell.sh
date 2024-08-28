@@ -48,7 +48,7 @@ CHECK $? "ENABLING MYSQL Service"
 systemctl start mysqld &>>$LOG_FILE
 CHECK $? "STARTING MYSQL Service"
 
-mysql -h mysql.telugudevops.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE
+mysql -h mysql.telugudevops.online -u root -pExpenseApp@1 -e 'show databases;'
 if [ $? -eq 0 ]
 then 
      echo -e "$Y ROOT Password is already SETUP,,SKIPPING $N"
