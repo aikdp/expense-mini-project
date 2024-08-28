@@ -32,7 +32,7 @@ CHECK(){
 }
 ROOT
 
-dnf install mysql-server -y | tee -a $LOG_FILE
+dnf install mysql-server -y &>>$LOG_FILE
 CHECK $? "MYSQL installation"
 
 systemctl enable mysqld &>>$LOG_FILE
