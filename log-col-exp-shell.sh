@@ -20,7 +20,6 @@ else
     echo -e "USER does not have ROOT ACCESS, $R Please LOGIN as a ROOT USER $N"
     exit 1
 fi
-}
 
 CHECK(){
     if [ $1 -eq  0 ]
