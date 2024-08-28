@@ -39,6 +39,18 @@ else
         exit 1
     fi  
 fi 
-
-
-
+systemctl --mysqld=service --state=running
+if [ $? -eq 0 ]
+then 
+    echo "MYSQL service already STARTED"
+else 
+    echo "MYSQL service in not STARTED, PLease START MYSQL"
+    systemctl start mysqld
+    if [ $? -eq  0 ]
+    then 
+        echo "MYSQL is SUCCESSFULLY STARTED"
+    else
+        echo "MYSQL is not STARTED"
+        exit 1
+    fi  
+fi 
