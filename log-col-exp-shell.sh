@@ -33,27 +33,27 @@ CHECK(){
 }
 ROOT
 dnf list installed mysql | tee -a $LOG_FILE
-    if [ $? -eq 0 ]
-    then 
-        echo -e "$Y MYSQL Server is already installed.$N"
-    else
-        echo -e "MYSQL Server is not Installed, $R Please install MSQL $N"
-        dnf install mysql-server -y | tee -a $LOG_FILE
-        CHECK $? "MYSQL installation"  
-    fi    
+if [ $? -eq 0 ]
+then 
+    echo -e "$Y MYSQL Server is already installed.$N"
+else
+    echo -e "MYSQL Server is not Installed, $R Please install MSQL $N"
+    dnf install mysql-server -y | tee -a $LOG_FILE
+    CHECK $? "MYSQL installation"  
+fi    
 
 systemctl enable mysqld &>>$LOG_FILE
-    CHECK $? "ENABLING MYSQL Service"
+CHECK $? "ENABLING MYSQL Service"
  
 systemctl start mysqld &>>$LOG_FILE
-    CHECK $? "STARTING MYSQL Service"
+CHECK $? "STARTING MYSQL Service"
 
 mysql -h mysql.telugudevops.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE
-    if [ $? -eq 0 ]
-    then 
-        echo -e "$Y ROOT Password is already SETUP,,SKIPPING $N"
-    else 
-        echo -e "ROOT Password is not setup,,,$R Please setup MYSQL ROOT Password $N"
-        mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOG_FILE
-        CHECK $? "ROOT PASSWORD SETUP"
-    fi    
+if [ $? -eq 0 ]
+then 
+     echo -e "$Y ROOT Password is already SETUP,,SKIPPING $N"
+else 
+    echo -e "ROOT Password is not setup,,,$R Please setup MYSQL ROOT Password $N"
+    mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOG_FILE
+    CHECK $? "ROOT PASSWORD SETUP"
+fi    
