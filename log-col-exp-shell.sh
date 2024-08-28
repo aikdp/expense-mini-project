@@ -12,7 +12,7 @@ TIME=$(date +%Y-%m-%d-%H-%M-%S)
 mkdir -p $LOG_FOLDER
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME.log"
 
-
+ROOT(){
 if [ $USERID -eq 0 ] 
 then 
     echo -e "USER have a $G ROOT ACCESS $N" 
@@ -20,7 +20,7 @@ else
     echo -e "USER does not have ROOT ACCESS, $R Please LOGIN as a ROOT USER $N"
     exit 1
 fi
-
+}
 CHECK(){
     if [ $1 -eq  0 ]
     then 
@@ -30,7 +30,7 @@ CHECK(){
         exit 1
     fi    
 }
-
+ROOT
 dnf list installed mysql | tee -a $LOG_FILE
 if [ $? -eq 0 ]
 then 
