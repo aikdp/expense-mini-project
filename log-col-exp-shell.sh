@@ -9,8 +9,8 @@ N="\e[0m"
 mkdir -p $LOG_FOLDER
 LOG_FOLDER="var/log/expense"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-TIME=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME.log"
+TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log"
 
 if [ $USERID -eq 0 ] 
 then 
