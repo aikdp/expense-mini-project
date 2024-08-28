@@ -12,6 +12,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log"
 
+ROOT(){
 if [ $USERID -eq 0 ] 
 then 
     echo -e "USER have a $G ROOT ACCESS $N" 
@@ -19,7 +20,8 @@ else
     echo -e "USER does not have ROOT ACCESS, $R Please LOGIN as a ROOT USER $N"
     exit 1
 fi
-
+}
+ROOT
 CHECK(){
     if [ $1 -eq  0 ]
     then 
@@ -29,7 +31,6 @@ CHECK(){
         exit 1
     fi    
 }
-CHECK
 
 dnf list installed mysql | tee -a $LOG_FILE
     if [ $? -eq 0 ]
