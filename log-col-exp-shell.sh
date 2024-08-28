@@ -15,23 +15,23 @@ LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME.log"
 ROOT(){
 if [ $USERID -eq 0 ] 
 then 
-    echo -e "USER have a $G ROOT ACCESS $N" 
+    echo -e "USER have a $G ROOT ACCESS $N" | tee -a $LOG_FILE
 else
-    echo -e "USER does not have ROOT ACCESS, $R Please LOGIN as a ROOT USER $N"
+    echo -e "USER does not have ROOT ACCESS, $R Please LOGIN as a ROOT USER $N" | tee -a $LOG_FILE
     exit 1
 fi
 }
 CHECK(){
     if [ $1 -eq  0 ]
     then 
-        echo -e "$2 is $G SUCCESS $N"
+        echo -e "$2 is $G SUCCESS $N" | tee -a $LOG_FILE
     else
-        echo -e "$2 is $R FAILED $N"
+        echo -e "$2 is $R FAILED $N" | tee -a $LOG_FILE
         exit 1
     fi    
 }
 ROOT
-dnf list installed mysql | tee -a $LOG_FILE
+dnf list installed mysqld | tee -a $LOG_FILE
 if [ $? -eq 0 ]
 then 
     echo -e "$Y MYSQL Server is already installed.$N"
