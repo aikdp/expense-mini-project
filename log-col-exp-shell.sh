@@ -6,10 +6,10 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-mkdir -p $LOG_FOLDER
 LOG_FOLDER="/var/log/shell-expense"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
+mkdir -p $LOG_FOLDER
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log"
 
 ROOT(){
