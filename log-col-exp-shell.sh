@@ -37,6 +37,7 @@ then
     echo -e "$Y MYSQL Server is already installed.$N"
 else
     echo -e "MYSQL Server is not Installed, $R Please install MSQL $N"
+    
     dnf install mysql-server -y | tee -a $LOG_FILE
     CHECK $? "MYSQL installation"  
 fi    
