@@ -17,7 +17,7 @@ else
     echo "MYSQL Server is not Installed, please install MSQL"
     dnf install mysql-server -y
 fi    
-systemctl list enabled mysql
+systemctl list-unit-files --mysql=service --state=enabled
 if [ $? -eq 0 ]
 then 
     echo "MYSQL service already ENABLED"
