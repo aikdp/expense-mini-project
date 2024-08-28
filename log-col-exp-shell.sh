@@ -40,7 +40,6 @@ else
     dnf install mysql-server -y | tee -a $LOG_FILE
     CHECK $? "MYSQL installation"  
 fi    
-
 systemctl enable mysqld &>>$LOG_FILE
 CHECK $? "ENABLING MYSQL Service"
  
