@@ -69,7 +69,7 @@ CHECK $? "unzipping backend appliaction"
 
 cd /app
 npm install &>>$LOG_FILE
-CHECk $? "Installing Dependcies of Backend application"
+CHECK $? "Installing Dependcies of Backend application"
 
 cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service &>>$LOG_FILE
 CHECK $? "Copied backend service for API call to DB"
