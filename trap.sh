@@ -17,6 +17,7 @@
 
 
 #another example of trap
+set -e
 
 err_report(){
     echo "Error on line $1"
