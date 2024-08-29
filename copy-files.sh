@@ -50,19 +50,19 @@ else
     echo "Please enter correct Source directory path"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -type f)
-LIST_FILE=$(echo "$FILES")
+F=$(find $SOURCE_DIR -type f)
+LIST_FILE=$(echo $F)
 if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
         cp $SOURCE_DIR $DEST_DIR
-        if [ $? -eq 0 ]
-        then
-            echo "Copyinng files ..SUCESS"
-        else
-            echo "Copying files...FAILED"
-            exit 1
-        fi
+            if [ $? -eq 0 ]
+            then
+                echo "Copyinng files ..SUCESS"
+            else
+                echo "Copying files...FAILED"
+                exit 1
+            fi
 else
     echo "Please enetr correct Destination Directory PATH"
     exit 1
