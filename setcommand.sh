@@ -7,7 +7,7 @@
 
 # echo "Hello world after failure"
 
-#Checking commands if we enter wrong command, execution should stop
+#Setting the automatic exit, if we get an error
 # set -e 
 # echo "Hello world"
 
@@ -17,7 +17,7 @@
 
 
 #Checking commands if we enter wrong command, execution should stop
-set -ex     #x is for code debug
+set -ex     #set -x is for code debug
 echo "Hello world"
 
 echooo "heloo world ..Failure"
