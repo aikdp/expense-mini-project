@@ -32,7 +32,7 @@ USERID=$(id -u)
 SOURCE_DIR=$1
 DEST_DIR=$2
 
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "Please run the script as a User Privilages"
     exit 1
