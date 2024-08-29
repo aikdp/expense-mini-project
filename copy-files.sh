@@ -60,4 +60,5 @@ then
     fi
 else
     echo "Please enetr correct Destination Directory PATH"
+    exit 1
 fi
