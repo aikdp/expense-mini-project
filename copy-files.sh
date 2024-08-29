@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SOURCE_DIR=${/home/ec2-user/durga} 
-DEST_DIR=${/home/ec2-user/prasad}
+SOURCE_DIR=$(/home/ec2-user/durga)
+DEST_DIR=$(/home/ec2-user/prasad)
 
 
 # USAGE(){
