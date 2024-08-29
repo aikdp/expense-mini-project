@@ -51,7 +51,7 @@ else
     exit 1
 fi
 FILES=$(find $SOURCE_DIR -type f)
-LIST_FILE=$(echo $FILES)
+LIST_FILE=$(echo "$FILES")
 if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
