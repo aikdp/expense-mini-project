@@ -32,6 +32,11 @@ USERID=$(id -u)
 SOURCE_DIR=$(/home/ec2-user/durga)
 DEST_DIR=$(/home/ec2-user/prasad)
 
+ram(){
+    echo "error on line $1 : $2"
+}
+trap 'ram "${LINENO}" "$BASH_COMMAND"' ERR
+
 if [ $USERID -ne 0 ]
 then
     echo "Please run the script as a User Privilages"
