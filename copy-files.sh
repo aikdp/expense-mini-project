@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR= ${/home/ec2-user/durga} 
+SOURCE_DIR=${/home/ec2-user/durga} 
 DEST_DIR=${/home/ec2-user/prasad}
 
 
