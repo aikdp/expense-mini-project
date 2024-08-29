@@ -47,17 +47,18 @@ else
     echo "Please enter correct Source directory path"
     exit 1
 fi
+
 if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
-    cp $LIST_FILE $DEST_DIR
-    if [ $? -eq 0 ]
-    then
-        echo "Copyinng files ..SUCESS"
-    else
-        echo "Copying files...FAILED"
-        exit 1
-    fi
+        cp $LIST_FILE $DEST_DIR
+        if [ $? -eq 0 ]
+        then
+            echo "Copyinng files ..SUCESS"
+        else
+            echo "Copying files...FAILED"
+            exit 1
+        fi
 else
     echo "Please enetr correct Destination Directory PATH"
     exit 1
