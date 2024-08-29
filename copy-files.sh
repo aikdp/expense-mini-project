@@ -29,8 +29,8 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=$(/home/ec2-user/durga)
-DEST_DIR=$(/home/ec2-user/prasad)
+# SOURCE_DIR=$(/home/ec2-user/durga)
+# DEST_DIR=$(/home/ec2-user/prasad)
 
 ram_prasad(){
     echo "error on line $1 : $2"
