@@ -1,4 +1,4 @@
 #!/bin/bash
 
-FILES=$(find /home/ec2-user/durga -name ".log" -f)
-echo "List of files: $FILES)
+FILES=$(find /home/ec2-user/durga -type f -name ".log")
+echo "List of files: $FILES"
