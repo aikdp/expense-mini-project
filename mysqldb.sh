@@ -32,6 +32,10 @@ CHECK(){
 }
 ROOT
 
+#Script started or not
+echo " Script execution is started at: $(date)" | tee -a $LOG_FILE
+
+
 dnf list installed mysql &>>$LOG_FILE
 if [ $? -eq 0 ]
 then 

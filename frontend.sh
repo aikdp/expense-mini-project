@@ -34,6 +34,9 @@ CHECK(){
 }
 ROOT
 
+#Script started or not
+echo "Script execution is started at: $(date)" | tee -a $LOG_FILE
+
 dnf install nginx -y &>>$LOG_FILE
 CHECK $? "Installing Nginx"
 
