@@ -47,7 +47,6 @@ else
     echo "Please enter correct Source directory path"
     exit 1
 fi
-
 # if [ -d $DEST_DIR ]
 # then 
 #     echo "Destination Directory Exists"
