@@ -8,7 +8,16 @@
 # echo "Hello world after failure"
 
 #Checking commands if we enter wrong command, execution should stop
-set -e 
+# set -e 
+# echo "Hello world"
+
+# echooo "heloo world ..Failure"
+
+# echo "Hello world after failure"
+
+
+#Checking commands if we enter wrong command, execution should stop
+set -ex     #x is for code debug
 echo "Hello world"
 
 echooo "heloo world ..Failure"
