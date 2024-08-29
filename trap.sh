@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# set -e
+# set -e  # set -e means exit automatically, if get an error 
 
 # failure(){
 #     echo "Failed at: $1 : $2"
@@ -16,7 +16,8 @@
 # echo "DOing graet. How about you Durga"
 
 
-#another example of trap
+#another example of trap not giving set -e command, means it proceed even if get an error (all line are executes)
+#tarp command is to catch error on the script
 
 err_report(){
     echo "Error on line $1"
@@ -29,4 +30,4 @@ echhooo "Hi Durga, How are you prasad"
 
 echo "DOing graet. How about you Durga"
 
-echo "hello" | grep foo
+echo "hello 
