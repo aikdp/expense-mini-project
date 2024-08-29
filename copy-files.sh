@@ -11,6 +11,6 @@ DEST_DIR=$2
 # if [ -d $SOURCE_DIR ]
 # then
 #     echo "enter source dirctory path: $SOURCE_DIR"
-cp -t $SOURCE_DIR $DEST_DIR
+cp $SOURCE_DIR $DEST_DIR
 
 # echo "Copying files from source dir to Destination DIR is started at: $(date)" 
