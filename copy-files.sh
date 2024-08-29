@@ -41,12 +41,12 @@ if
 if [ -d $SOURCE_DIR ]
 then
     echo "Source directory exist"
-    FILES=$(find $SOURCE_DIR -type f)
-    LIST_FILE=$(echo $FILES)
 else 
     echo "Please enter correct Source directory path"
     exit 1
 fi
+FILES=$(find $SOURCE_DIR -type f)
+LIST_FILE=$(echo $FILES)
 # if [ -d $DEST_DIR ]
 # then 
 #     echo "Destination Directory Exists"
