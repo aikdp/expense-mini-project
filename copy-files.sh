@@ -2,7 +2,7 @@
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-
+set -ex
 USAGE(){
     echo "USAGE:: is please give source directoy path and Destination Dir path"
     exit 1
