@@ -29,13 +29,13 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=$3
-DEST_DIR=$4
+SOURCE_DIR=$1
+DEST_DIR=$2
 
-ram_prasad(){
-    echo "error on line $1 : $2"
-}
-trap 'ram_prasad "${LINENO}" "$BASH_COMMAND"' ERR
+# ram_prasad(){
+#     echo "error on line $1 : $2"
+# }
+# trap 'ram_prasad "${LINENO}" "$BASH_COMMAND"' ERR
 
 
 if [ $USERID -ne 0 ]
