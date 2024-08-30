@@ -29,8 +29,8 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=/home/ec2-user/durga
-DEST_DIR=/home/ec2-user/prasad
+SOURCE_DIR=$1
+DEST_DIR=$2
 
 ram_prasad(){
     echo "error on line $1 : $2"
@@ -43,6 +43,11 @@ then
     echo "Please run the script as a User Privilages"
     exit 1
 fi
+
+USAGE(){
+    echo "USAGE:: is please give source directoy path and Destination Dir path"
+    exit 1
+}
 
 if [ -d $SOURCE_DIR ]
 then
