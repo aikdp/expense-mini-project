@@ -44,11 +44,11 @@ then
     exit 1
 fi
 
-USAGE(){
-    echo "USAGE:: is please give source directoy path and Destination Dir path"
-    exit 1
-}
-USAGE
+# USAGE(){
+#     echo "USAGE:: is please give source directoy path and Destination Dir path"
+#     exit 1
+# }
+# USAGE
 if [ -d $SOURCE_DIR ]
 then
     echo "Source directory exist"
