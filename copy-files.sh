@@ -29,8 +29,8 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=$(/home/ec2-user/durga/)
-DEST_DIR=$(/home/ec2-user/prasad/)
+SOURCE_DIR=$(/home/ec2-user/durga)
+DEST_DIR=$(/home/ec2-user/prasad)
 
 ram_prasad(){
     echo "error on line $1 : $2"
@@ -46,12 +46,12 @@ if
 if [ -d $SOURCE_DIR ]
 then
     echo "Source directory exist"
+    F=$(find $SOURCE_DIR -type f)
+    LIST_FILE=$(echo $F)
 else 
     echo "Please enter correct Source directory path"
     exit 1
 fi
-F=$(find $SOURCE_DIR -type f)
-LIST_FILE=$(echo $F)
 
 if [ -d $DEST_DIR ]
 then 
