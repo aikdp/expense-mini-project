@@ -46,8 +46,7 @@ if
 if [ -d $SOURCE_DIR ]
 then
     echo "Source directory exist"
-    F=$(find $SOURCE_DIR -type f)
-    LIST_FILE=$(echo $F)
+    find $SOURCE_DIR -type f
 else 
     echo "Please enter correct Source directory path"
     exit 1
@@ -56,7 +55,7 @@ fi
 if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
-        cp -r $SOURCE_DIR $DEST_DIR
+        CP=$(cp -r /home/ec2-user/logs/* $DEST_DIR)
             if [ $? -eq 0 ]
             then
                 echo "Copyinng files ..SUCESS"
