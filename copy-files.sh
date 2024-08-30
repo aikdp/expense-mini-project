@@ -54,16 +54,8 @@ fi
 
 if [ -d $DEST_DIR ]
 then 
-    echo "Destination Directory Exists"
-        # cp -r $SOURCE_DIR $DEST_DIR
-        #     if [ $? -eq 0 ]
-        #     then
-        #         echo "Copyinng files ..SUCESS"
-        #     else
-        #         echo "Copying files...FAILED"
-        #         exit 1
-        #     fi
-else
+    echo "Destination Directory Exists" 
+ else
     echo "Please enetr correct Destination Directory PATH"
     exit 1
 fi
@@ -75,3 +67,11 @@ else
     echo "Copying files...FAILED"
     exit 1
 fi
+  # cp -r $SOURCE_DIR $DEST_DIR
+        #     if [ $? -eq 0 ]
+        #     then
+        #         echo "Copyinng files ..SUCESS"
+        #     else
+        #         echo "Copying files...FAILED"
+        #         exit 1
+        #     fi
