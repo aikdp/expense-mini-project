@@ -29,8 +29,8 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=$(/home/ec2-user/durga/)
-DEST_DIR=$(/home/ec2-user/prasad/)
+SOURCE_DIR=$1
+DEST_DIR=$2
 
 ram_prasad(){
     echo "error on line $1 : $2"
@@ -52,10 +52,11 @@ else
 fi
 F=$(find $SOURCE_DIR -type f)
 LIST_FILE=$(echo $F)
-if [ -d $DEST_DIR ]
+
+if [ !-d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
-        cp $SOURCE_DIR $DEST_DIR
+        cp -r $SOURCE_DIR/* $DEST_DIR
             if [ $? -eq 0 ]
             then
                 echo "Copyinng files ..SUCESS"
