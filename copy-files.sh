@@ -29,8 +29,8 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=$(/home/ec2-user/durga)
-DEST_DIR=$(/home/ec2-user/prasad)
+SOURCE_DIR=/home/ec2-user/durga
+DEST_DIR=/home/ec2-user/prasad
 
 ram_prasad(){
     echo "error on line $1 : $2"
@@ -56,7 +56,7 @@ fi
 if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
-        cp -r /home/ec2-user/durga/*.log $DEST_DIR
+        cp -r $SOURCE_DIR $DEST_DIR
             if [ $? -eq 0 ]
             then
                 echo "Copyinng files ..SUCESS"
