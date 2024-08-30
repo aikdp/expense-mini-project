@@ -28,7 +28,7 @@
 # echo "Copying files from source dir to Destination DIR is started at: $(date)" 
 
 
-USERID=$(id -u)
+# USERID=$(id -u)
 SOURCE_DIR=/home/ec2-user/logs
 DEST_DIR=/home/ec2-user/backup
 
@@ -37,11 +37,11 @@ DEST_DIR=/home/ec2-user/backup
 # }
 # trap 'ram_prasad "${LINENO}" "$BASH_COMMAND"' ERR
 
-if [ $USERID -ne 0 ]
-then
-    echo "Please run the script as a User Privilages"
-    exit 1
-if
+# if [ $USERID -ne 0 ]
+# then
+#     echo "Please run the script as a User Privilages"
+#     exit 1
+# if
 
 if [ -d $SOURCE_DIR ]
 then
@@ -54,8 +54,16 @@ fi
 
 if [ -d $DEST_DIR ]
 then 
-    echo "Destination Directory Exists" 
- else
+    echo "Destination Directory Exists"
+        # cp -r $SOURCE_DIR $DEST_DIR
+        #     if [ $? -eq 0 ]
+        #     then
+        #         echo "Copyinng files ..SUCESS"
+        #     else
+        #         echo "Copying files...FAILED"
+        #         exit 1
+        #     fi
+else
     echo "Please enetr correct Destination Directory PATH"
     exit 1
 fi
@@ -67,11 +75,3 @@ else
     echo "Copying files...FAILED"
     exit 1
 fi
-  # cp -r $SOURCE_DIR $DEST_DIR
-        #     if [ $? -eq 0 ]
-        #     then
-        #         echo "Copyinng files ..SUCESS"
-        #     else
-        #         echo "Copying files...FAILED"
-        #         exit 1
-        #     fi
