@@ -53,7 +53,7 @@ fi
 F=$(find $SOURCE_DIR -type f)
 LIST_FILE=$(echo $F)
 
-if [ !-d $DEST_DIR ]
+if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
         cp -r /home/ec2-user/durga/* $DEST_DIR
