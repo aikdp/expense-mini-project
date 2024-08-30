@@ -56,7 +56,7 @@ fi
 if [ -d $DEST_DIR ]
 then 
     echo "Destination Directory Exists"
-        cp -r /home/ec2-user/durga/* $DEST_DIR
+        cp -r /home/ec2-user/durga/*.log $DEST_DIR
             if [ $? -eq 0 ]
             then
                 echo "Copyinng files ..SUCESS"
