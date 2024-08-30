@@ -28,7 +28,7 @@
 # echo "Copying files from source dir to Destination DIR is started at: $(date)" 
 
 
-# USERID=$(id -u)
+USERID=$(id -u)
 SOURCE_DIR=/home/ec2-user/durga
 DEST_DIR=/home/ec2-user/prasad
 
@@ -37,11 +37,11 @@ DEST_DIR=/home/ec2-user/prasad
 # }
 # trap 'ram_prasad "${LINENO}" "$BASH_COMMAND"' ERR
 
-# if [ $USERID -ne 0 ]
-# then
-#     echo "Please run the script as a User Privilages"
-#     exit 1
-# if
+if [ $USERID -ne 0 ]
+then
+    echo "Please run the script as a User Privilages"
+    exit 1
+if
 
 if [ -d $SOURCE_DIR ]
 then
