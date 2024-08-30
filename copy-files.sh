@@ -29,8 +29,8 @@
 
 
 USERID=$(id -u)
-SOURCE_DIR=$1
-DEST_DIR=$2
+SOURCE_DIR=$3
+DEST_DIR=$4
 
 ram_prasad(){
     echo "error on line $1 : $2"
