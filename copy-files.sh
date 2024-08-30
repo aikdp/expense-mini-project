@@ -37,15 +37,13 @@ ram_prasad(){
 }
 trap 'ram_prasad "${LINENO}" "$BASH_COMMAND"' ERR
 
-ROOT(){
+
 if [ $USERID -ne 0 ]
 then
     echo "Please run the script as a User Privilages"
     exit 1
 fi
-}
 
-ROOT
 if [ -d $SOURCE_DIR ]
 then
     echo "Source directory exist"
