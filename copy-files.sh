@@ -37,6 +37,8 @@ ram_prasad(){
 }
 trap 'ram_prasad "${LINENO}" "$BASH_COMMAND"' ERR
 
+set -x
+
 if [ $USERID -ne 0 ]
 then
     echo "Please run the script as a User Privilages"
