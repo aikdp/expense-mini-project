@@ -14,11 +14,11 @@ else
     echo "$SOURCE_DIR not exist, please give coreect $SOURCE_DIR Directory"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -name ".log" -mtime +14)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
 
-while IFS= read -r file
+while read -r file #check removing IFS= for better understanding 
 do
     echo "Deleting list of existing files: $file"       #this line is for just to know the user which files are deleting will show on the terminal
-    rm -rf $file
+    # rm -rf $file
 done <<< $FILES                #this is for giving input, so loop will contimue untill all files are delete
