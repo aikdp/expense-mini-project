@@ -41,10 +41,10 @@ then
     then 
         echo -e "$G All log files older than 14 dyas are successfully ZIPPED $N"
         while IFS= read -r file
-            do
-                echo -e "$Y Deleting all log files:$N $file"
-                rm -rf $file
-            done <<< $FILES 
+        do
+            echo -e "$Y Deleting all log files:$N $file"
+            rm -rf $file
+        done <<< $FILES 
     else
         echo -e "$R All log files older than 14 dyas are NOT ZIPPED $N"
         exit 1
