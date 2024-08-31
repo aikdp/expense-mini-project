@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-set -x
+
 SOURCE_DIR=/home/ec2-user/app-logs    #create logs directory, you can give dirctory dynamicall as well (like SOURCE_DIR=$1)
 if [ -d $SOURCE_DIR ]
 then 
@@ -10,8 +10,8 @@ else
     echo "$SOURCE_DIR not exist, please give coreect $SOURCE_DIR Directory"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -name ".log" -mtime +14) #-name ".log" -mtime -14)
-echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
+find $SOURCE_DIR -name ".log" -mtime +14 #-name ".log" -mtime -14)
+                                              #As of this line, we did print or show the existing log files
 
 # while IFS= read -r file
 # do
