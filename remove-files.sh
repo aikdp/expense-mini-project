@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#deleting logs in source directiry
+#scheduling deleting logs in source directiry older than 14 days  
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
