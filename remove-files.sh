@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-SOURCE_DIR=/home/ec2-user/app-logs   #Dynamiclly giving Source Directory
+SOURCE_DIR=$1   #Dynamiclly giving Source Directory
 
 if [ -d $SOURCE_DIR ]
 then
