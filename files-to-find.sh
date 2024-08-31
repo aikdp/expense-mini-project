@@ -10,7 +10,7 @@ else
     echo "$SOURCE_DIR not exist, please give coreect $SOURCE_DIR Directory"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -type f -mtime +14) #-name ".log" -mtime -14)
+FILES=$(find $SOURCE_DIR -type f -name ".log" -mtime +14) #-name ".log" -mtime -14)
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
 
 # while IFS= read -r file
