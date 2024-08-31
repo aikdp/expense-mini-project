@@ -29,14 +29,14 @@ then
     echo -e "$R $DEST_DIR not exist $N, please give coreect $DEST_DIR Directory"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS)
 echo -e "$Y List of all log files are $N: $FILES"
 
 if [ ! -z $FILES ]
 then 
     echo -e "$G Files are found $N"
     ZIP_FILE="$DEST_DIR/app-logs-$TIME_STAMP.zip"
-    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
+    find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
     if [ -f $ZIP_FILE ]
     then 
         echo -e "$G All log files older than 14 dyas are successfully ZIPPED $N"
