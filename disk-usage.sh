@@ -1,8 +1,9 @@
 #!/bin/bash
 
 
-DU=$(df -hT | grep Xfs)
+DU=$(df -hT | grep xfs)
 DT=5 
+
 
 while IFS= read -r line
 do
