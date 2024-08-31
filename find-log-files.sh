@@ -6,7 +6,7 @@
 # 3.find the files
 
 
-SOURCE_DIR=/home/ec2-user/app-logs      #create logs directory
+SOURCE_DIR=/home/ec2-user/      #create logs directory
 if [ -d $SOURCE_DIR ]
 then 
     echo "$SOURCE_DIR is exists"
