@@ -4,6 +4,6 @@
 SOURCE_DIR=/home/ec2-user/app-logs
 
 # FILES=$(find $SOURCE_DIR -type f)
-# FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
-FILES=$(find $SOURCE_DIR -type f -name "*.log")
+# FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)        #show all .log files older than 14 days
+FILES=$(find $SOURCE_DIR -type f -name "*.log" -mtime +14)             #print all .log files without days means all .log files
 echo "list of files are: $FILES"
