@@ -3,24 +3,12 @@
 #deleting logs in source directiry and move to destination directory
 
 SOURCE_DIR=$1 #Dynamiclly giving Source Directory
-# DAYS=${2: -14}
-# USAGE(){
-#     echo "USAGE: sh <filename> <SOURCE_DIR> <DEST-DIR> <Days>,,,.PLease check"
-#     exit 1
-# }
-# USAGE
 
 if [ ! -d $SOURCE_DIR ]
 then
     echo "SOurce Diractory Doesn't exist"
     exit 1
 fi
-
-# if [ ! -d $DEST_DIR ]
-# then
-#     echo "Destination Diractory Doesn't exist"
-#     exit 1
-# fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo "list of files are: $FILES"
