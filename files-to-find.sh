@@ -22,5 +22,5 @@ else
     exit 1
 fi
 # FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
-FILES=$(find $SOURCE_DIR -type d)
+FILES=$(find $SOURCE_DIR -type f)
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
