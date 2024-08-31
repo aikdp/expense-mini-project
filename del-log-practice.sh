@@ -13,7 +13,8 @@ USAGE
 if [ ! -d $SOURCE_DIR ]
 then
     echo "SOurce Diractory Doesn't exist"
-    exit 1
+    USAGE
+    # exit 1
 fi
 
 # if [ ! -d $DEST_DIR ]
