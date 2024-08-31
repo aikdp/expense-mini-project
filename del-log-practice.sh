@@ -26,7 +26,7 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo "list of files are: $FILES"
 while IFS= read -r file
 do
-    echo "Deleting list of files: $LF"
+    echo "Deleting list of files: $FILES"
     # rm -rf $file
 done <<< $FILES
 
