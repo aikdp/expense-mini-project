@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-SOURCE_DIR=$1   #Dynamiclly giving Source Directory
+SOURCE_DIR=/home/ec2-user/app-logs  #Dynamiclly giving Source Directory
 
 if [ -d $SOURCE_DIR ]
 then
@@ -22,6 +22,6 @@ echo -e "$Y list of files are:$N $FILES"
 while IFS= read -r file
 do
     echo -e "$Y Deleting list of files: $N $file"
-    rm -rf $file
+    # rm -rf $file
 done <<< $FILES
 
