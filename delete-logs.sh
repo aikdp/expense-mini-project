@@ -17,7 +17,7 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
 
-while read file #check removing IFS= and -r for better understanding 
+while read -r file #check removing IFS= and -r for better understanding 
 do
     echo "Deleting list of existing files: $file"       #this line is for just to know the user which files are deleting will show on the terminal
     # rm -rf $file
