@@ -15,5 +15,5 @@ else
     exit 1
 fi
 # FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)  # * is for all in the dirctory .log files
-FILES=$(find $SOURCE_DIR -type f "*.txt" -mtime +14)           # -type f means files
+FILES=$(find $SOURCE_DIR -type f -name "*.txt" -mtime +14)           # -type f means files
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
