@@ -3,6 +3,11 @@
 
 
 SOURCE_DIR=$1    #create logs directory, you can give dirctory dynamicall as well (like SOURCE_DIR=$1)
+
+USAGE(){
+    echo "USAGE: Please give arguments like sh <filename> <sourch-dir-path> ... "
+    exit 1
+}
 if [ -d $SOURCE_DIR ]
 then 
     echo "$SOURCE_DIR is exists"
