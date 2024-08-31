@@ -26,6 +26,6 @@ echo "list of files are: $FILES"
 while IFS= read -r file
 do
     echo "Deleting list of files: $LF"
-    rm -rf $file
+    # rm -rf $file
 done <<< $FILES
 
