@@ -32,7 +32,7 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 echo -e "$Y List of all log files are:$N $FILES"
 
-if [ ! -z $FILES ] # not empty files then it will true
+if [ ! -z $FILES ]
 then 
     echo -e "$G Files are found $N"
     ZIP_FILE="$DEST_DIR/app-logs-$TIME_STAMP.zip"
