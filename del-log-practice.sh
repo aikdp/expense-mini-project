@@ -3,18 +3,17 @@
 #deleting logs in source directiry and move to destination directory
 
 SOURCE_DIR=$1 #Dynamiclly giving Source Directory
-DAYS=${2: -14}
-USAGE(){
-    echo "USAGE: sh <filename> <SOURCE_DIR> <DEST-DIR> <Days>,,,.PLease check"
-    exit 1
-}
-USAGE
+# DAYS=${2: -14}
+# USAGE(){
+#     echo "USAGE: sh <filename> <SOURCE_DIR> <DEST-DIR> <Days>,,,.PLease check"
+#     exit 1
+# }
+# USAGE
 
 if [ ! -d $SOURCE_DIR ]
 then
     echo "SOurce Diractory Doesn't exist"
-    USAGE
-    # exit 1
+    exit 1
 fi
 
 # if [ ! -d $DEST_DIR ]
