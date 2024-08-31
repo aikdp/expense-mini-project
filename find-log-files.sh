@@ -6,7 +6,7 @@
 # 3.find the files
 # 4. delete them
 
-SOURCE_DIR=/home/ec2-user/logs      #create logs directory
+SOURCE_DIR=/home/ec2-user/app-logs      #create logs directory
 if [ -d $SOURCE_DIR ]
 then 
     echo "$SOURCE_DIR is exists"
