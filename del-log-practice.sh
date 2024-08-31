@@ -2,7 +2,7 @@
 
 #deleting logs in source directiry and move to destination directory
 
-SOURCE-DIR=$1 #Dynamiclly giving Source Directory
+SOURCE_DIR=$1 #Dynamiclly giving Source Directory
 
 USAGE(){
     echo "USAGE: sh <filename> <SOURCE_DIR> <DEST-DIR> <Days>,,,.PLease check"
