@@ -6,6 +6,7 @@ SOURCE_DIR=$1 #Dynamiclly giving Source Directory
 DAYS=${2: -14}
 USAGE(){
     echo "USAGE: sh <filename> <SOURCE_DIR> <DEST-DIR> <Days>,,,.PLease check"
+    exit 1
 }
 USAGE
 
