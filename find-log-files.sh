@@ -17,5 +17,6 @@ fi
 # FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)  # * is for all in the dirctory .log files
 # FILES=$(find $SOURCE_DIR -type f -name "*.txt" -mtime +14)           # -type f means files
 
-FILES=$(find $SOURCE_DIR -type f -name "*.js" -mtime +14) 
+# FILES=$(find $SOURCE_DIR -type f -name "*.js" -mtime +14)   #you can use all commands
+FILES=$(find $SOURCE_DIR -type f)   #all files in that dirctory
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
