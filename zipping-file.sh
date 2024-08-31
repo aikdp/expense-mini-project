@@ -30,26 +30,26 @@ then
     exit 1
 fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
-echo "List of all log files are: $FILES"
+echo -e  "$Y List of all log files are:$N $FILES"
 
 if [ ! -z $FILES ] # not empty files then it will true
 then 
-    echo " Files are found"
+    echo -e "$G Files are found $N"
     ZIP_FILE="$DEST_DIR/app-logs-$TIME_STAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
     if [ -f $ZIP_FILE ]
     then 
-        echo "All log files older than 14 dyas are successfully ZIPPED"
+        echo -e "$G All log files older than 14 dyas are successfully ZIPPED $N"
             while IFS= read -r file
             do
-                echo "Deleting all log files: $file"
+                echo -e "$Y Deleting all log files:$N $file"
                 rm -rf $file
             done <<< $FILES 
     else
-        echo "All log files older than 14 dyas are NOT ZIPPED"
+        echo -e "$R All log files older than 14 dyas are NOT ZIPPED $N"
         exit 1
     fi
 else
-    echo "Files are NOT FOUND"
+    echo -e "$R Files are NOT FOUND $N"
     exit
 fi
