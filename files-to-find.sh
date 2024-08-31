@@ -21,5 +21,6 @@ else
     echo "$SOURCE_DIR not exist, please give coreect $SOURCE_DIR Directory"
     exit 1
 fi
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+# FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+FILES=$(find $SOURCE_DIR -type d)
 echo "List of existing log files are: $FILES"               #As of this line, we did print or show the existing log files
