@@ -8,7 +8,12 @@ USAGE(){
     echo "USAGE: Please give arguments like sh <filename> <sourch-dir-path> ... "
     exit 1
 }
-USAGE
+
+if [ ! $1 ]
+then 
+    USAGE
+fi 
+
 if [ -d $SOURCE_DIR ]
 then 
     echo "$SOURCE_DIR is exists"
