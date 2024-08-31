@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-
+set -x
 SOURCE_DIR=/home/ec2-user/app-logs    #create logs directory, you can give dirctory dynamicall as well (like SOURCE_DIR=$1)
 if [ -d $SOURCE_DIR ]
 then 
