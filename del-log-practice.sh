@@ -22,7 +22,7 @@ fi
 #     exit 1
 # fi
 
-FILES=$(find $SOURCE_DIR -name ".log" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name ".log" -mtime +14)
 echo "list of files are: $FILES"
 while IFS= read -r file
 do
