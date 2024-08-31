@@ -32,8 +32,11 @@ fi
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS)
 echo -e "$Y List of all log files are $N: $FILES"
 
-if [ ! -z $FILES ]
+if [ -z $FILES ]
 then 
+    echo -e "$R Files are NOT FOUND $N"
+    exit 1
+else
     echo -e "$G Files are found $N"
     ZIP_FILE="$DEST_DIR/app-logs-$TIME_STAMP.zip"
     find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
@@ -49,7 +52,5 @@ then
         echo -e "$R All log files older than 14 dyas are NOT ZIPPED $N"
         exit 1
     fi
-else
-    echo -e "$R Files are NOT FOUND $N"
-    exit
+    
 fi
