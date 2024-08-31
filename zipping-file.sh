@@ -40,13 +40,13 @@ then
     if [ -f $ZIP_FILE ]
     then 
         echo "All log files older than 14 dyas are successfully ZIPPED"
-        while IFS= read -r file
-        do
-            echo "Deleting all log files" $file"
-            rm -rf $file
-        done <<< $FILES 
+            while IFS= read -r file
+            do
+                echo "Deleting all log files: $file"
+                rm -rf $file
+            done <<< $FILES 
     else
-        echo ""All log files older than 14 dyas are NOT ZIPPED"
+        echo "All log files older than 14 dyas are NOT ZIPPED"
         exit 1
     fi
 else
