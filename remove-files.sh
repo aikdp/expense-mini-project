@@ -22,6 +22,6 @@ echo -e "$Y list of files are:$N $FILES"
 while IFS= read -r file
 do
     echo -e "$Y Deleting list of files: $N $file"
-    # rm -rf $file
+    rm -rf $file
 done <<< $FILES
 
