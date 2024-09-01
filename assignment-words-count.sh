@@ -4,7 +4,7 @@
 #Write a script that reads a text file and counts the occurrences of each word, 
 #display the top 5 most frequent words along with their counts.
 
-FN=$1
+cat /home/ec2-user/expense-mini-project/text.txt
 
 # while IFS= read line
 # do
