@@ -19,4 +19,4 @@ FN=text.txt
 #     fi
 # done < $FN
 
-sed -e 's/[^[:alpha:]]/ /g' $FN | tr '\n' " " | tr -s " " | tr " " '\n' | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl
+sed -e 's/[^[:alpha:]]/ /g' $FN | tr '\n' " " | tr -s " " | tr " " '\n' | tr 'A-Z' 'a-z' | sort | uniq -c | nl
