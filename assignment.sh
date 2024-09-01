@@ -5,7 +5,7 @@
 #display the top 5 most frequent words along with their counts.
 
 
-while IFS= read file
+while IFS= read line
 do
     if [ ! -z $file ]
     then
@@ -16,4 +16,4 @@ do
         echo "Text file empty, please check"
         exit 1
     fi
-done < [ $text.txt ]
+done < $text.txt
