@@ -16,4 +16,4 @@ do
         echo "Text file empty, please check"
         exit 1
     fi
-done <${text.txt}
+done < $text.txt
