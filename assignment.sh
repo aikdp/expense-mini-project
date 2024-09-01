@@ -4,6 +4,7 @@
 #Write a script that reads a text file and counts the occurrences of each word, 
 #display the top 5 most frequent words along with their counts.
 
+FN=$(text.txt)
 
 while IFS= read line
 do
@@ -16,4 +17,4 @@ do
         echo "Text file empty, please check"
         exit 1
     fi
-done < $text.txt
+done < $FN
