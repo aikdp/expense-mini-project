@@ -2,4 +2,4 @@
 
 #Convert Rows to Columns, Columns to Rows
 
-datamash -W transpose <rowtext.txt
+datamash -W transpose < rowtext.txt
