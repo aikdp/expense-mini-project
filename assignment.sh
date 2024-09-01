@@ -4,7 +4,7 @@
 #Write a script that reads a text file and counts the occurrences of each word, 
 #display the top 5 most frequent words along with their counts.
 
-FN=$(text.txt)
+FN=${text.txt}
 
 while IFS= read line
 do
