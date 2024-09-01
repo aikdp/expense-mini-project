@@ -3,4 +3,4 @@
 #Convert Rows to Columns, Columns to Rows
 
 # datamash -W transpose < rowtext.txt
-xargs -n < rowtext.txt
+xargs -nL < rowtext.txt
