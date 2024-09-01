@@ -11,7 +11,7 @@ do
     if [ ! -z $FN ]
     then
         echo "text files is not empty"
-        TOP_OCR=$( cat $FN | uniq -c | tr -i -o '\n' " " | head -5)
+        TOP_OCR=$( cat $FN | uniq -c | tr [:alnum:] | head -5)
         echo "top most frequent words along with counts: $TOP_OCR"
     else
         echo "Text file empty, please check"
