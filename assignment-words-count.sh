@@ -4,7 +4,7 @@
 #Write a script that reads a text file and counts the occurrences of each word, 
 #display the top 5 most frequent words along with their counts.
 
-cat /home/ec2-user/expense-mini-project/text.txt
+FN=$1
 
 # while IFS= read line
 # do
@@ -19,7 +19,4 @@ cat /home/ec2-user/expense-mini-project/text.txt
 #     fi
 # done < $FN
 
-# sed -e 's/[^[:alpha:]]/ /g' $FN | tr '\n' " " | tr -s " " | tr " " '\n' | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | head -5
-
-printf "\n"
-sort | uniq -c | sort -nr
+sed -e 's/[^[:alpha:]]/ /g' $FN | tr '\n' " " | tr -s " " | tr " " '\n' | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | head -5
