@@ -19,4 +19,7 @@ FN=$1
 #     fi
 # done < $FN
 
-sed -e 's/[^[:alpha:]]/ /g' $FN | tr '\n' " " | tr -s " " | tr " " '\n' | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | head -5
+# sed -e 's/[^[:alpha:]]/ /g' $FN | tr '\n' " " | tr -s " " | tr " " '\n' | tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | head -5
+
+printf "\n"
+sort | uniq -c | sort -nr
